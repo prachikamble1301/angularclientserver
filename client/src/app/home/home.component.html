@@ -1,0 +1,29 @@
+
+<div class="table-responsive">
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>rollno</th>
+        <th>name</th>
+        <th>marks</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let i of students">
+        <td>{{i.rno}}</td>
+        <td>{{i.sname}}</td>
+        <td>{{i.mark}}</td>
+        <td>
+        <button (click)="deleteData(i.rno)" type="button" class="btn btn-default">DELETE</button>
+        </td>
+        <td>
+          <button (click)="gotoupdateData(i.rno)" type="button" class="btn btn-default">UPDATE</button>
+          </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
+<button (click)="gotoRegister()" type="button" class="btn btn-default">Add Student</button>
+
